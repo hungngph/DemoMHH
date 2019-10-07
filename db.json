@@ -181,7 +181,8 @@
     },
     {
       "id": "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.DAILY_ACTIVEUSER_TRANS_shard",
-      "text": "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.DAILY_ACTIVEUSER_TRANS_shard"
+      "text": "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.DAILY_ACTIVEUSER_TRANS_shard",
+      "editable": "true"
     },
     {
       "id": "etl_6hour.daily_activeuser_trans_biteam",
