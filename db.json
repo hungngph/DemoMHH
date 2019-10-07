@@ -1,131 +1,13 @@
 {
   "downstreamTasks": [
-    "etl_6hour.core_trans >> etl_6hour.trans_fee_bonus_biteam >> etl_6hour.merge_fee_job_biteam >> etl_6hour.paid_user_trans >> etl_6hour.daily_transaction_biteam >> etl_6hour.daily_activeuser_trans_biteam >> etl_6hour.user_retention_trans_biteam >> etl_6hour.update_user_retention_trans_agent_biteam >> etl_6hour.update_user_retention_trans_final_biteam >> mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.USER_RETENTION_TRANS_shard",
-    "etl_6hour.core_trans >> etl_6hour.trans_fee_bonus_biteam >> etl_6hour.merge_fee_job_biteam >> etl_6hour.paid_user_trans >> etl_6hour.daily_transaction_biteam >> etl_6hour.daily_activeuser_trans_biteam >> mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.DAILY_ACTIVEUSER_TRANS_shard",
-    "etl_6hour.core_trans >> etl_6hour.trans_fee_bonus_biteam >> etl_6hour.merge_fee_job_biteam >> etl_6hour.paid_user_trans >> etl_6hour.daily_transaction_biteam >> mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.DAILY_TRANSACTION_shard",
-    "etl_6hour.core_trans >> etl_6hour.trans_fee_bonus_biteam >> etl_6hour.merge_fee_job_biteam >> etl_6hour.paid_user_trans >> etl_6hour.trans_vh_biteam_job >> mask_BITEAM_EXP_6h_shard_daily.mask_BITEAM_EXP.TRANS_VH_shard",
-    "etl_6hour.core_trans >> etl_6hour.trans_fee_bonus_biteam >> etl_6hour.merge_fee_job_biteam >> etl_6hour.paid_user_trans >> mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.PAID_USER_TRANS_shard",
-    "etl_6hour.core_trans >> etl_6hour.trans_fee_bonus_biteam >> etl_6hour.merge_fee_job_biteam >> etl_6hour.merge_all_core_trans_without_dgd >> etl_6hour.merge_all_core_trans_grouped_by_hour",
-    "etl_6hour.core_trans >> etl_6hour.trans_fee_bonus_biteam >> etl_6hour.merge_fee_job_biteam >> etl_6hour.merge_core_trans",
-    "etl_6hour.core_trans >> etl_6hour.trans_fee_bonus_biteam >> etl_6hour.merge_fee_job_biteam >> etl_6hour.monthly_activeuser_trans_biteam >> mask_BITEAM_EXP_30m_shard_monthly.mask_BITEAM_EXP.MONTHLY_ACTIVEUSER_TRANS_shard",
-    "etl_6hour.core_trans >> etl_6hour.trans_fee_bonus_biteam >> etl_6hour.merge_fee_job_biteam >> etl_6hour.user_trans_with_bank_account",
-    "etl_6hour.core_trans >> etl_6hour.trans_fee_bonus_biteam >> etl_6hour.merge_fee_job_biteam >> mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.CORE_TRANS_shard",
-    "etl_6hour.core_trans >> etl_6hour.trans_fee_bonus_biteam >> mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.TRANS_FEE_BONUS_shard",
-    "etl_6hour.core_trans >> etl_6hour.map_service_biteam >> mask_BITEAM_EXP_6h_full_snapshot.mask_BITEAM_EXP.MAP_SERVICE_full",
-    "etl_6hour.core_trans >> etl_6hour.user_retention_login_biteam >> etl_6hour.update_user_retention_login_biteam >> mask_BITEAM_EXP_6h_shard_daily.mask_BITEAM_EXP.USER_RETENTION_LOGIN_shard",
-    "etl_6hour.core_trans >> etl_6hour.accumulated_user_trans_cost_opt >> etl_6hour.converted_user_biteam >> etl_6hour.converted_user_retention_biteam >> mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.CONVERTED_USER_RETENTION_shard",
-    "etl_6hour.core_trans >> etl_6hour.accumulated_user_trans_cost_opt >> etl_6hour.converted_user_biteam >> mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.CONVERTED_USER_shard",
-    "etl_6hour.core_trans >> etl_6hour.accumulated_user_trans_cost_opt >> etl_6hour.user_info_biteam >> etl_6hour.user_info_promotion_claimcode_biteam_job >> mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.USER_INFO_PROMOTION_CLAIMCODE_shard",
-    "etl_6hour.core_trans >> etl_6hour.accumulated_user_trans_cost_opt >> etl_6hour.user_info_biteam >> etl_6hour.promotion_result_biteam_job >> mask_DWH_STAGING_6h_shard_snapshot.mask_DWH_STAGING.PROMOTION_RESULT_shard",
-    "etl_6hour.core_trans >> etl_6hour.accumulated_user_trans_cost_opt >> etl_6hour.user_info_biteam >> mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.USER_INFO_shard",
-    "etl_6hour.core_trans >> etl_6hour.accumulated_user_trans_cost_opt >> etl_6hour.promotion_result_biteam_job >> mask_DWH_STAGING_6h_shard_snapshot.mask_DWH_STAGING.PROMOTION_RESULT_shard",
-    "etl_6hour.core_trans >> etl_6hour.accumulated_user_trans_cost_opt >> mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.ACCUMULATED_USER_TRANS_shard",
-    "etl_6hour.core_trans >> etl_6hour.trans_vh_biteam_job >> mask_BITEAM_EXP_6h_shard_daily.mask_BITEAM_EXP.TRANS_VH_shard"
+    "etl_6hour.daily_activeuser_trans_biteam >> etl_6hour.user_retention_trans_biteam >> etl_6hour.update_user_retention_trans_agent_biteam >> etl_6hour.update_user_retention_trans_final_biteam >> mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.USER_RETENTION_TRANS_shard",
+    "etl_6hour.daily_activeuser_trans_biteam >> mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.DAILY_ACTIVEUSER_TRANS_shard"
   ],
   "downstreamTables": [
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.TRANS_FEE_BONUS >> project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.PAID_USER_TRANS >> project-5400504384186300846.BITEAM_EXP.DAILY_TRANSACTION >> project-5400504384186300846.BITEAM_EXP.DAILY_ACTIVEUSER_TRANS >> project-5400504384186300846.BITEAM_EXP.USER_RETENTION_TRANS >> momovn-prod.BITEAM_EXP.USER_RETENTION_TRANS",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.TRANS_FEE_BONUS >> project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.PAID_USER_TRANS >> project-5400504384186300846.BITEAM_EXP.DAILY_TRANSACTION >> project-5400504384186300846.BITEAM_EXP.DAILY_ACTIVEUSER_TRANS >> momovn-prod.BITEAM_EXP.DAILY_ACTIVEUSER_TRANS",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.TRANS_FEE_BONUS >> project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.PAID_USER_TRANS >> project-5400504384186300846.BITEAM_EXP.DAILY_TRANSACTION >> momovn-prod.BITEAM_EXP.DAILY_TRANSACTION",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.TRANS_FEE_BONUS >> project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.PAID_USER_TRANS >> project-5400504384186300846.BITEAM_EXP.TRANS_VH >> momovn-prod.BITEAM_EXP.TRANS_VH",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.TRANS_FEE_BONUS >> project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.PAID_USER_TRANS >> momovn-prod.BITEAM_EXP.PAID_USER_TRANS",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.TRANS_FEE_BONUS >> project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.ALL_CORE_TRANS_WITHOUT_DGD >> project-5400504384186300846.BITEAM_EXP.CORE_TRANS_GROUPED_BY_HOUR",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.TRANS_FEE_BONUS >> project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.ALL_CORE_TRANS",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.TRANS_FEE_BONUS >> project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.MONTHLY_ACTIVEUSER_TRANS >> momovn-prod.BITEAM_EXP.MONTHLY_ACTIVEUSER_TRANS",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.TRANS_FEE_BONUS >> project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.ALL_CORE_TRANS_WITH_BANK_ACCOUNT",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.TRANS_FEE_BONUS >> project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> momovn-prod.BITEAM_EXP.CORE_TRANS",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.TRANS_FEE_BONUS >> momovn-prod.BITEAM_EXP.TRANS_FEE_BONUS",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.MAP_SERVICE >> momovn-prod.BITEAM_EXP.MAP_SERVICE",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.USER_RETENTION_LOGIN >> momovn-prod.BITEAM_EXP.USER_RETENTION_LOGIN",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.ACCUMULATED_USER_TRANS >> project-5400504384186300846.BITEAM_EXP.CONVERTED_USER >> project-5400504384186300846.BITEAM_EXP.CONVERTED_USER_RETENTION >> momovn-prod.BITEAM_EXP.CONVERTED_USER_RETENTION",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.ACCUMULATED_USER_TRANS >> project-5400504384186300846.BITEAM_EXP.CONVERTED_USER >> momovn-prod.BITEAM_EXP.CONVERTED_USER",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.ACCUMULATED_USER_TRANS >> project-5400504384186300846.BITEAM_EXP.USER_INFO >> project-5400504384186300846.BITEAM_EXP.USER_INFO_PROMOTION_CLAIMCODE >> momovn-prod.BITEAM_EXP.USER_INFO_PROMOTION_CLAIMCODE",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.ACCUMULATED_USER_TRANS >> project-5400504384186300846.BITEAM_EXP.USER_INFO >> project-5400504384186300846.DWH_STAGING.PROMOTION_RESULT >> momovn-prod.DWH_STAGING.PROMOTION_RESULT",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.ACCUMULATED_USER_TRANS >> project-5400504384186300846.BITEAM_EXP.USER_INFO >> momovn-prod.BITEAM_EXP.USER_INFO",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.ACCUMULATED_USER_TRANS >> project-5400504384186300846.DWH_STAGING.PROMOTION_RESULT >> momovn-prod.DWH_STAGING.PROMOTION_RESULT",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.ACCUMULATED_USER_TRANS >> momovn-prod.BITEAM_EXP.ACCUMULATED_USER_TRANS",
-    "project-5400504384186300846.BITEAM_EXP.CORE_TRANS >> project-5400504384186300846.BITEAM_EXP.TRANS_VH >> momovn-prod.BITEAM_EXP.TRANS_VH"
+    "project-5400504384186300846.BITEAM_EXP.DAILY_ACTIVEUSER_TRANS >> project-5400504384186300846.BITEAM_EXP.USER_RETENTION_TRANS >> momovn-prod.BITEAM_EXP.USER_RETENTION_TRANS",
+    "project-5400504384186300846.BITEAM_EXP.DAILY_ACTIVEUSER_TRANS >> momovn-prod.BITEAM_EXP.DAILY_ACTIVEUSER_TRANS"
   ],
   "tasks": [
-    {
-      "taskName": "etl_6hour.core_trans",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.BITEAM_EXP.CORE_TRANS",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/staging.core_trans.sql",
-        "track_prom": "False",
-        "granularity": "DAILY",
-        "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "ESTIMATED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
-    {
-      "taskName": "etl_6hour.trans_fee_bonus_biteam",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.BITEAM_EXP.TRANS_FEE_BONUS",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/staging.trans_fee_bonus.sql",
-        "track_prom": "False",
-        "granularity": "DAILY",
-        "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
-    {
-      "taskName": "etl_6hour.merge_fee_job_biteam",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.BITEAM_EXP.CORE_TRANS",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/staging.merge_f_core_fee_bonus.sql",
-        "track_prom": "False",
-        "granularity": "DAILY",
-        "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
-    {
-      "taskName": "etl_6hour.paid_user_trans",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.BITEAM_EXP.PAID_USER_TRANS",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/staging.paid_user_trans.sql",
-        "track_prom": "False",
-        "granularity": "DAILY",
-        "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
-    {
-      "taskName": "etl_6hour.daily_transaction_biteam",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.BITEAM_EXP.DAILY_TRANSACTION",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/staging.daily_transaction.sql",
-        "track_prom": "False",
-        "granularity": "DAILY",
-        "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
     {
       "taskName": "etl_6hour.daily_activeuser_trans_biteam",
       "operator": "DpEtlOperator",
@@ -133,13 +15,13 @@
       "tableType": "SHARD",
       "params": {
         "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/staging.daily_activeuser_trans.sql",
+        "table_state": "COMPLETED",
+        "new_sink": "None",
         "track_prom": "False",
         "granularity": "DAILY",
         "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
+        "is_prev_day": "False",
+        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt"
       }
     },
     {
@@ -149,13 +31,13 @@
       "tableType": "SHARD",
       "params": {
         "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/staging.user_retention_trans_without_agent.sql",
+        "table_state": "ESTIMATED",
+        "new_sink": "None",
         "track_prom": "False",
         "granularity": "DAILY",
         "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "ESTIMATED",
-        "new_sink": "None",
-        "is_prev_day": "False"
+        "is_prev_day": "False",
+        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt"
       }
     },
     {
@@ -165,13 +47,13 @@
       "tableType": "SHARD",
       "params": {
         "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/staging.user_retention_trans_agent.sql",
+        "table_state": "ESTIMATED",
+        "new_sink": "None",
         "track_prom": "False",
         "granularity": "DAILY",
         "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "ESTIMATED",
-        "new_sink": "None",
-        "is_prev_day": "False"
+        "is_prev_day": "False",
+        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt"
       }
     },
     {
@@ -181,13 +63,13 @@
       "tableType": "SHARD",
       "params": {
         "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/staging.update_user_retention_trans.sql",
+        "table_state": "COMPLETED",
+        "new_sink": "None",
         "track_prom": "False",
         "granularity": "DAILY",
         "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
+        "is_prev_day": "False",
+        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt"
       }
     },
     {
@@ -197,6 +79,7 @@
       "tableType": "SHARD",
       "params": {
         "cluster_columns": "",
+        "table_state": "COMPLETED",
         "mask_time_columns": "",
         "sink": "momovn-prod.BITEAM_EXP.USER_RETENTION_TRANS",
         "mask_json_columns": "",
@@ -208,8 +91,7 @@
         "mask_hash_columns": "",
         "partition_column": "",
         "mask_phone_columns": "",
-        "table_type": "SHARD",
-        "table_state": "COMPLETED"
+        "table_type": "SHARD"
       }
     },
     {
@@ -219,6 +101,7 @@
       "tableType": "SHARD",
       "params": {
         "cluster_columns": "",
+        "table_state": "COMPLETED",
         "mask_time_columns": "",
         "sink": "momovn-prod.BITEAM_EXP.DAILY_ACTIVEUSER_TRANS",
         "mask_json_columns": "",
@@ -230,580 +113,28 @@
         "mask_hash_columns": "",
         "partition_column": "",
         "mask_phone_columns": "REFERENCE",
-        "table_type": "SHARD",
-        "table_state": "COMPLETED"
-      }
-    },
-    {
-      "taskName": "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.DAILY_TRANSACTION_shard",
-      "operator": "DpMaskOperator",
-      "sinkTable": "momovn-prod.BITEAM_EXP.DAILY_TRANSACTION",
-      "tableType": "SHARD",
-      "params": {
-        "cluster_columns": "",
-        "mask_time_columns": "",
-        "sink": "momovn-prod.BITEAM_EXP.DAILY_TRANSACTION",
-        "mask_json_columns": "",
-        "mask_integer_columns": "",
-        "source": "project-5400504384186300846.BITEAM_EXP.DAILY_TRANSACTION",
-        "partition_type": "DATE",
-        "granularity": "DAILY",
-        "mask_remove_columns": "",
-        "mask_hash_columns": "",
-        "partition_column": "",
-        "mask_phone_columns": "REFERENCE",
-        "table_type": "SHARD",
-        "table_state": "COMPLETED"
-      }
-    },
-    {
-      "taskName": "etl_6hour.trans_vh_biteam_job",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.BITEAM_EXP.TRANS_VH",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/staging.Hang_trans_vh.sql",
-        "track_prom": "False",
-        "granularity": "DAILY",
-        "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
-    {
-      "taskName": "mask_BITEAM_EXP_6h_shard_daily.mask_BITEAM_EXP.TRANS_VH_shard",
-      "operator": "DpMaskOperator",
-      "sinkTable": "momovn-prod.BITEAM_EXP.TRANS_VH",
-      "tableType": "SHARD",
-      "params": {
-        "cluster_columns": "",
-        "mask_time_columns": "",
-        "sink": "momovn-prod.BITEAM_EXP.TRANS_VH",
-        "mask_json_columns": "",
-        "mask_integer_columns": "",
-        "source": "project-5400504384186300846.BITEAM_EXP.TRANS_VH",
-        "partition_type": "DATE",
-        "granularity": "DAILY",
-        "mask_remove_columns": "",
-        "mask_hash_columns": "",
-        "partition_column": "",
-        "mask_phone_columns": "",
-        "table_type": "SHARD",
-        "table_state": "COMPLETED"
-      }
-    },
-    {
-      "taskName": "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.PAID_USER_TRANS_shard",
-      "operator": "DpMaskOperator",
-      "sinkTable": "momovn-prod.BITEAM_EXP.PAID_USER_TRANS",
-      "tableType": "SHARD",
-      "params": {
-        "cluster_columns": "",
-        "mask_time_columns": "TRANS_DATE,DATE_PARTITION",
-        "sink": "momovn-prod.BITEAM_EXP.PAID_USER_TRANS",
-        "mask_json_columns": "",
-        "mask_integer_columns": "",
-        "source": "project-5400504384186300846.BITEAM_EXP.PAID_USER_TRANS",
-        "partition_type": "DATE",
-        "granularity": "DAILY",
-        "mask_remove_columns": "",
-        "mask_hash_columns": "",
-        "partition_column": "",
-        "mask_phone_columns": "INITIATOR,DEBITOR,CREDITOR",
-        "table_type": "SHARD",
-        "table_state": "COMPLETED"
-      }
-    },
-    {
-      "taskName": "etl_6hour.merge_all_core_trans_without_dgd",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.BITEAM_EXP.ALL_CORE_TRANS_WITHOUT_DGD",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/biteam_exp.merge_all_core_trans_without_dgd.sql",
-        "track_prom": "False",
-        "granularity": "DAILY",
-        "is_interactive": "False",
-        "mapping_file": "",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
-    {
-      "taskName": "etl_6hour.merge_all_core_trans_grouped_by_hour",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.BITEAM_EXP.CORE_TRANS_GROUPED_BY_HOUR",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/biteam_exp.merge_all_core_trans_grouped_by_hour.sql",
-        "track_prom": "False",
-        "granularity": "DAILY",
-        "is_interactive": "False",
-        "mapping_file": "",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
-    {
-      "taskName": "etl_6hour.merge_core_trans",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.BITEAM_EXP.ALL_CORE_TRANS",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/biteam_exp.merge_core_trans.sql",
-        "track_prom": "False",
-        "granularity": "DAILY",
-        "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
-    {
-      "taskName": "etl_6hour.monthly_activeuser_trans_biteam",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.BITEAM_EXP.MONTHLY_ACTIVEUSER_TRANS",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/staging.monthly_activeuser_trans.sql",
-        "track_prom": "False",
-        "granularity": "MONTHLY",
-        "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
-    {
-      "taskName": "mask_BITEAM_EXP_30m_shard_monthly.mask_BITEAM_EXP.MONTHLY_ACTIVEUSER_TRANS_shard",
-      "operator": "DpMaskOperator",
-      "sinkTable": "momovn-prod.BITEAM_EXP.MONTHLY_ACTIVEUSER_TRANS",
-      "tableType": "SHARD",
-      "params": {
-        "cluster_columns": "",
-        "mask_time_columns": "",
-        "sink": "momovn-prod.BITEAM_EXP.MONTHLY_ACTIVEUSER_TRANS",
-        "mask_json_columns": "",
-        "mask_integer_columns": "",
-        "source": "project-5400504384186300846.BITEAM_EXP.MONTHLY_ACTIVEUSER_TRANS",
-        "partition_type": "DATE",
-        "granularity": "MONTHLY",
-        "mask_remove_columns": "",
-        "mask_hash_columns": "",
-        "partition_column": "",
-        "mask_phone_columns": "REFERENCE",
-        "table_type": "SHARD",
-        "table_state": "COMPLETED"
-      }
-    },
-    {
-      "taskName": "etl_6hour.user_trans_with_bank_account",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.BITEAM_EXP.ALL_CORE_TRANS_WITH_BANK_ACCOUNT",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/biteam_exp.user_trans_with_bank_account.sql",
-        "track_prom": "False",
-        "granularity": "DAILY",
-        "is_interactive": "False",
-        "mapping_file": "",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
-    {
-      "taskName": "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.CORE_TRANS_shard",
-      "operator": "DpMaskOperator",
-      "sinkTable": "momovn-prod.BITEAM_EXP.CORE_TRANS",
-      "tableType": "SHARD",
-      "params": {
-        "cluster_columns": "",
-        "mask_time_columns": "TRANS_DATE,DATE_PARTITION",
-        "sink": "momovn-prod.BITEAM_EXP.CORE_TRANS",
-        "mask_json_columns": "",
-        "mask_integer_columns": "",
-        "source": "project-5400504384186300846.BITEAM_EXP.CORE_TRANS",
-        "partition_type": "DATE",
-        "granularity": "DAILY",
-        "mask_remove_columns": "",
-        "mask_hash_columns": "",
-        "partition_column": "",
-        "mask_phone_columns": "DEBITOR,CREDITOR,INITIATOR",
-        "table_type": "SHARD",
-        "table_state": "COMPLETED"
-      }
-    },
-    {
-      "taskName": "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.TRANS_FEE_BONUS_shard",
-      "operator": "DpMaskOperator",
-      "sinkTable": "momovn-prod.BITEAM_EXP.TRANS_FEE_BONUS",
-      "tableType": "SHARD",
-      "params": {
-        "cluster_columns": "",
-        "mask_time_columns": "",
-        "sink": "momovn-prod.BITEAM_EXP.TRANS_FEE_BONUS",
-        "mask_json_columns": "",
-        "mask_integer_columns": "",
-        "source": "project-5400504384186300846.BITEAM_EXP.TRANS_FEE_BONUS",
-        "partition_type": "DATE",
-        "granularity": "DAILY",
-        "mask_remove_columns": "",
-        "mask_hash_columns": "",
-        "partition_column": "",
-        "mask_phone_columns": "",
-        "table_type": "SHARD",
-        "table_state": "COMPLETED"
-      }
-    },
-    {
-      "taskName": "etl_6hour.map_service_biteam",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.BITEAM_EXP.MAP_SERVICE",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/staging.map_service.sql",
-        "track_prom": "False",
-        "granularity": "DAILY",
-        "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
-    {
-      "taskName": "mask_BITEAM_EXP_6h_full_snapshot.mask_BITEAM_EXP.MAP_SERVICE_full",
-      "operator": "DpMaskOperator",
-      "sinkTable": "momovn-prod.BITEAM_EXP.MAP_SERVICE",
-      "tableType": "FULL",
-      "params": {
-        "cluster_columns": "",
-        "mask_time_columns": "",
-        "sink": "momovn-prod.BITEAM_EXP.MAP_SERVICE",
-        "mask_json_columns": "",
-        "mask_integer_columns": "",
-        "source": "project-5400504384186300846.BITEAM_EXP.MAP_SERVICE",
-        "partition_type": "DATE",
-        "granularity": "SNAPSHOT",
-        "mask_remove_columns": "",
-        "mask_hash_columns": "",
-        "partition_column": "",
-        "mask_phone_columns": "",
-        "table_type": "FULL",
-        "table_state": "COMPLETED"
-      }
-    },
-    {
-      "taskName": "etl_6hour.user_retention_login_biteam",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.BITEAM_EXP.USER_RETENTION_LOGIN",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/staging.user_retention_login.sql",
-        "track_prom": "False",
-        "granularity": "DAILY",
-        "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "ESTIMATED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
-    {
-      "taskName": "etl_6hour.update_user_retention_login_biteam",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.BITEAM_EXP.USER_RETENTION_LOGIN",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/staging.update_user_retention_login.sql",
-        "track_prom": "False",
-        "granularity": "DAILY",
-        "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
-    {
-      "taskName": "mask_BITEAM_EXP_6h_shard_daily.mask_BITEAM_EXP.USER_RETENTION_LOGIN_shard",
-      "operator": "DpMaskOperator",
-      "sinkTable": "momovn-prod.BITEAM_EXP.USER_RETENTION_LOGIN",
-      "tableType": "SHARD",
-      "params": {
-        "cluster_columns": "",
-        "mask_time_columns": "",
-        "sink": "momovn-prod.BITEAM_EXP.USER_RETENTION_LOGIN",
-        "mask_json_columns": "",
-        "mask_integer_columns": "",
-        "source": "project-5400504384186300846.BITEAM_EXP.USER_RETENTION_LOGIN",
-        "partition_type": "DATE",
-        "granularity": "DAILY",
-        "mask_remove_columns": "",
-        "mask_hash_columns": "",
-        "partition_column": "",
-        "mask_phone_columns": "",
-        "table_type": "SHARD",
-        "table_state": "COMPLETED"
-      }
-    },
-    {
-      "taskName": "etl_6hour.accumulated_user_trans_cost_opt",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.BITEAM_EXP.ACCUMULATED_USER_TRANS",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/ai_accumulated_user_trans.sql",
-        "track_prom": "False",
-        "granularity": "DAILY",
-        "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
-    {
-      "taskName": "etl_6hour.converted_user_biteam",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.BITEAM_EXP.CONVERTED_USER",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/staging.converted_user.sql",
-        "track_prom": "False",
-        "granularity": "DAILY",
-        "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
-    {
-      "taskName": "etl_6hour.converted_user_retention_biteam",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.BITEAM_EXP.CONVERTED_USER_RETENTION",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/staging.converted_user_retention.sql",
-        "track_prom": "False",
-        "granularity": "DAILY",
-        "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
-    {
-      "taskName": "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.CONVERTED_USER_RETENTION_shard",
-      "operator": "DpMaskOperator",
-      "sinkTable": "momovn-prod.BITEAM_EXP.CONVERTED_USER_RETENTION",
-      "tableType": "SHARD",
-      "params": {
-        "cluster_columns": "",
-        "mask_time_columns": "",
-        "sink": "momovn-prod.BITEAM_EXP.CONVERTED_USER_RETENTION",
-        "mask_json_columns": "",
-        "mask_integer_columns": "",
-        "source": "project-5400504384186300846.BITEAM_EXP.CONVERTED_USER_RETENTION",
-        "partition_type": "DATE",
-        "granularity": "SNAPSHOT",
-        "mask_remove_columns": "",
-        "mask_hash_columns": "",
-        "partition_column": "",
-        "mask_phone_columns": "REFERENCE",
-        "table_type": "SHARD",
-        "table_state": "COMPLETED"
-      }
-    },
-    {
-      "taskName": "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.CONVERTED_USER_shard",
-      "operator": "DpMaskOperator",
-      "sinkTable": "momovn-prod.BITEAM_EXP.CONVERTED_USER",
-      "tableType": "SHARD",
-      "params": {
-        "cluster_columns": "",
-        "mask_time_columns": "",
-        "sink": "momovn-prod.BITEAM_EXP.CONVERTED_USER",
-        "mask_json_columns": "",
-        "mask_integer_columns": "",
-        "source": "project-5400504384186300846.BITEAM_EXP.CONVERTED_USER",
-        "partition_type": "DATE",
-        "granularity": "SNAPSHOT",
-        "mask_remove_columns": "",
-        "mask_hash_columns": "",
-        "partition_column": "",
-        "mask_phone_columns": "REFERENCE",
-        "table_type": "SHARD",
-        "table_state": "COMPLETED"
-      }
-    },
-    {
-      "taskName": "etl_6hour.user_info_biteam",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.BITEAM_EXP.USER_INFO",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/staging.user_info.sql",
-        "track_prom": "False",
-        "granularity": "DAILY",
-        "is_interactive": "False",
-        "mapping_file": "",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
-    {
-      "taskName": "etl_6hour.user_info_promotion_claimcode_biteam_job",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.BITEAM_EXP.USER_INFO_PROMOTION_CLAIMCODE",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/staging.user_info_promotion_claimcode.sql",
-        "track_prom": "False",
-        "granularity": "DAILY",
-        "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
-    {
-      "taskName": "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.USER_INFO_PROMOTION_CLAIMCODE_shard",
-      "operator": "DpMaskOperator",
-      "sinkTable": "momovn-prod.BITEAM_EXP.USER_INFO_PROMOTION_CLAIMCODE",
-      "tableType": "SHARD",
-      "params": {
-        "cluster_columns": "",
-        "mask_time_columns": "",
-        "sink": "momovn-prod.BITEAM_EXP.USER_INFO_PROMOTION_CLAIMCODE",
-        "mask_json_columns": "",
-        "mask_integer_columns": "",
-        "source": "project-5400504384186300846.BITEAM_EXP.USER_INFO_PROMOTION_CLAIMCODE",
-        "partition_type": "DATE",
-        "granularity": "SNAPSHOT",
-        "mask_remove_columns": "",
-        "mask_hash_columns": "",
-        "partition_column": "",
-        "mask_phone_columns": "REFERENCE",
-        "table_type": "SHARD",
-        "table_state": "COMPLETED"
-      }
-    },
-    {
-      "taskName": "etl_6hour.promotion_result_biteam_job",
-      "operator": "DpEtlOperator",
-      "sinkTable": "project-5400504384186300846.DWH_STAGING.PROMOTION_RESULT",
-      "tableType": "SHARD",
-      "params": {
-        "query_file": "/usr/local/airflow/cfg/etl/query/biteam_exp/staging.promotion_result.sql",
-        "track_prom": "False",
-        "granularity": "DAILY",
-        "is_interactive": "False",
-        "mapping_file": "/usr/local/airflow/cfg/etl/mapping/non_replace.txt",
-        "table_state": "COMPLETED",
-        "new_sink": "None",
-        "is_prev_day": "False"
-      }
-    },
-    {
-      "taskName": "mask_DWH_STAGING_6h_shard_snapshot.mask_DWH_STAGING.PROMOTION_RESULT_shard",
-      "operator": "DpMaskOperator",
-      "sinkTable": "momovn-prod.DWH_STAGING.PROMOTION_RESULT",
-      "tableType": "SHARD",
-      "params": {
-        "cluster_columns": "",
-        "mask_time_columns": "",
-        "sink": "momovn-prod.DWH_STAGING.PROMOTION_RESULT",
-        "mask_json_columns": "",
-        "mask_integer_columns": "",
-        "source": "project-5400504384186300846.DWH_STAGING.PROMOTION_RESULT",
-        "partition_type": "DATE",
-        "granularity": "SNAPSHOT",
-        "mask_remove_columns": "",
-        "mask_hash_columns": "",
-        "partition_column": "",
-        "mask_phone_columns": "id",
-        "table_type": "SHARD",
-        "table_state": "COMPLETED"
-      }
-    },
-    {
-      "taskName": "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.USER_INFO_shard",
-      "operator": "DpMaskOperator",
-      "sinkTable": "momovn-prod.BITEAM_EXP.USER_INFO",
-      "tableType": "SHARD",
-      "params": {
-        "cluster_columns": "",
-        "mask_time_columns": "",
-        "sink": "momovn-prod.BITEAM_EXP.USER_INFO",
-        "mask_json_columns": "",
-        "mask_integer_columns": "",
-        "source": "project-5400504384186300846.BITEAM_EXP.USER_INFO",
-        "partition_type": "DATE",
-        "granularity": "SNAPSHOT",
-        "mask_remove_columns": "",
-        "mask_hash_columns": "",
-        "partition_column": "",
-        "mask_phone_columns": "REFERENCE",
-        "table_type": "SHARD",
-        "table_state": "COMPLETED"
-      }
-    },
-    {
-      "taskName": "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.ACCUMULATED_USER_TRANS_shard",
-      "operator": "DpMaskOperator",
-      "sinkTable": "momovn-prod.BITEAM_EXP.ACCUMULATED_USER_TRANS",
-      "tableType": "SHARD",
-      "params": {
-        "cluster_columns": "",
-        "mask_time_columns": "",
-        "sink": "momovn-prod.BITEAM_EXP.ACCUMULATED_USER_TRANS",
-        "mask_json_columns": "",
-        "mask_integer_columns": "",
-        "source": "project-5400504384186300846.BITEAM_EXP.ACCUMULATED_USER_TRANS",
-        "partition_type": "DATE",
-        "granularity": "SNAPSHOT",
-        "mask_remove_columns": "",
-        "mask_hash_columns": "",
-        "partition_column": "",
-        "mask_phone_columns": "REFERENCE",
-        "table_type": "SHARD",
-        "table_state": "COMPLETED"
+        "table_type": "SHARD"
       }
     }
   ],
   "tableDeps": [
     {
       "id": "momovn-prod.BITEAM_EXP.USER_RETENTION_TRANS",
-      "text": "momovn-prod.BITEAM_EXP.USER_RETENTION_TRANS",
-      "editable": "true"
+      "text": "momovn-prod.BITEAM_EXP.USER_RETENTION_TRANS"
     },
     {
       "id": "project-5400504384186300846.BITEAM_EXP.USER_RETENTION_TRANS",
       "text": "project-5400504384186300846.BITEAM_EXP.USER_RETENTION_TRANS",
       "next": [
         "momovn-prod.BITEAM_EXP.USER_RETENTION_TRANS"
-      ],
-      "editable": "true"
+      ]
     },
     {
       "id": "project-5400504384186300846.BITEAM_EXP.USER_RETENTION_TRANS",
       "text": "project-5400504384186300846.BITEAM_EXP.USER_RETENTION_TRANS",
       "next": [
         "project-5400504384186300846.BITEAM_EXP.USER_RETENTION_TRANS"
-      ],
-      "editable": "true"
+      ]
     },
     {
       "id": "momovn-prod.BITEAM_EXP.DAILY_ACTIVEUSER_TRANS",
@@ -815,248 +146,38 @@
       "next": [
         "project-5400504384186300846.BITEAM_EXP.USER_RETENTION_TRANS",
         "momovn-prod.BITEAM_EXP.DAILY_ACTIVEUSER_TRANS"
-      ],
-      "editable": "true"
-    },
-    {
-      "id": "momovn-prod.BITEAM_EXP.DAILY_TRANSACTION",
-      "text": "momovn-prod.BITEAM_EXP.DAILY_TRANSACTION",
-      "editable": "true"
-    },
-    {
-      "id": "project-5400504384186300846.BITEAM_EXP.DAILY_TRANSACTION",
-      "text": "project-5400504384186300846.BITEAM_EXP.DAILY_TRANSACTION",
-      "next": [
-        "project-5400504384186300846.BITEAM_EXP.DAILY_ACTIVEUSER_TRANS",
-        "momovn-prod.BITEAM_EXP.DAILY_TRANSACTION"
-      ],
-      "editable": "true"
-    },
-    {
-      "id": "momovn-prod.BITEAM_EXP.TRANS_VH",
-      "text": "momovn-prod.BITEAM_EXP.TRANS_VH",
-      "editable": "true"
-    },
-    {
-      "id": "project-5400504384186300846.BITEAM_EXP.TRANS_VH",
-      "text": "project-5400504384186300846.BITEAM_EXP.TRANS_VH",
-      "next": [
-        "momovn-prod.BITEAM_EXP.TRANS_VH"
-      ],
-      "editable": "true"
-    },
-    {
-      "id": "momovn-prod.BITEAM_EXP.PAID_USER_TRANS",
-      "text": "momovn-prod.BITEAM_EXP.PAID_USER_TRANS"
-    },
-    {
-      "id": "project-5400504384186300846.BITEAM_EXP.PAID_USER_TRANS",
-      "text": "project-5400504384186300846.BITEAM_EXP.PAID_USER_TRANS",
-      "next": [
-        "project-5400504384186300846.BITEAM_EXP.DAILY_TRANSACTION",
-        "project-5400504384186300846.BITEAM_EXP.TRANS_VH",
-        "momovn-prod.BITEAM_EXP.PAID_USER_TRANS"
-      ],
-      "editable": "true"
-    },
-    {
-      "id": "project-5400504384186300846.BITEAM_EXP.CORE_TRANS_GROUPED_BY_HOUR",
-      "text": "project-5400504384186300846.BITEAM_EXP.CORE_TRANS_GROUPED_BY_HOUR",
-      "editable": "true"
-    },
-    {
-      "id": "project-5400504384186300846.BITEAM_EXP.ALL_CORE_TRANS_WITHOUT_DGD",
-      "text": "project-5400504384186300846.BITEAM_EXP.ALL_CORE_TRANS_WITHOUT_DGD",
-      "next": [
-        "project-5400504384186300846.BITEAM_EXP.CORE_TRANS_GROUPED_BY_HOUR"
-      ],
-      "editable": "true"
-    },
-    {
-      "id": "project-5400504384186300846.BITEAM_EXP.ALL_CORE_TRANS",
-      "text": "project-5400504384186300846.BITEAM_EXP.ALL_CORE_TRANS"
-    },
-    {
-      "id": "momovn-prod.BITEAM_EXP.MONTHLY_ACTIVEUSER_TRANS",
-      "text": "momovn-prod.BITEAM_EXP.MONTHLY_ACTIVEUSER_TRANS"
-    },
-    {
-      "id": "project-5400504384186300846.BITEAM_EXP.MONTHLY_ACTIVEUSER_TRANS",
-      "text": "project-5400504384186300846.BITEAM_EXP.MONTHLY_ACTIVEUSER_TRANS",
-      "next": [
-        "momovn-prod.BITEAM_EXP.MONTHLY_ACTIVEUSER_TRANS"
-      ]
-    },
-    {
-      "id": "project-5400504384186300846.BITEAM_EXP.ALL_CORE_TRANS_WITH_BANK_ACCOUNT",
-      "text": "project-5400504384186300846.BITEAM_EXP.ALL_CORE_TRANS_WITH_BANK_ACCOUNT"
-    },
-    {
-      "id": "momovn-prod.BITEAM_EXP.CORE_TRANS",
-      "text": "momovn-prod.BITEAM_EXP.CORE_TRANS"
-    },
-    {
-      "id": "project-5400504384186300846.BITEAM_EXP.CORE_TRANS",
-      "text": "project-5400504384186300846.BITEAM_EXP.CORE_TRANS",
-      "next": [
-        "project-5400504384186300846.BITEAM_EXP.PAID_USER_TRANS",
-        "project-5400504384186300846.BITEAM_EXP.ALL_CORE_TRANS_WITHOUT_DGD",
-        "project-5400504384186300846.BITEAM_EXP.ALL_CORE_TRANS",
-        "project-5400504384186300846.BITEAM_EXP.MONTHLY_ACTIVEUSER_TRANS",
-        "project-5400504384186300846.BITEAM_EXP.ALL_CORE_TRANS_WITH_BANK_ACCOUNT",
-        "momovn-prod.BITEAM_EXP.CORE_TRANS"
-      ]
-    },
-    {
-      "id": "momovn-prod.BITEAM_EXP.TRANS_FEE_BONUS",
-      "text": "momovn-prod.BITEAM_EXP.TRANS_FEE_BONUS"
-    },
-    {
-      "id": "project-5400504384186300846.BITEAM_EXP.TRANS_FEE_BONUS",
-      "text": "project-5400504384186300846.BITEAM_EXP.TRANS_FEE_BONUS",
-      "next": [
-        "project-5400504384186300846.BITEAM_EXP.CORE_TRANS",
-        "momovn-prod.BITEAM_EXP.TRANS_FEE_BONUS"
-      ]
-    },
-    {
-      "id": "momovn-prod.BITEAM_EXP.MAP_SERVICE",
-      "text": "momovn-prod.BITEAM_EXP.MAP_SERVICE"
-    },
-    {
-      "id": "project-5400504384186300846.BITEAM_EXP.MAP_SERVICE",
-      "text": "project-5400504384186300846.BITEAM_EXP.MAP_SERVICE",
-      "next": [
-        "momovn-prod.BITEAM_EXP.MAP_SERVICE"
-      ]
-    },
-    {
-      "id": "momovn-prod.BITEAM_EXP.USER_RETENTION_LOGIN",
-      "text": "momovn-prod.BITEAM_EXP.USER_RETENTION_LOGIN"
-    },
-    {
-      "id": "project-5400504384186300846.BITEAM_EXP.USER_RETENTION_LOGIN",
-      "text": "project-5400504384186300846.BITEAM_EXP.USER_RETENTION_LOGIN",
-      "next": [
-        "momovn-prod.BITEAM_EXP.USER_RETENTION_LOGIN"
-      ]
-    },
-    {
-      "id": "project-5400504384186300846.BITEAM_EXP.USER_RETENTION_LOGIN",
-      "text": "project-5400504384186300846.BITEAM_EXP.USER_RETENTION_LOGIN",
-      "next": [
-        "project-5400504384186300846.BITEAM_EXP.USER_RETENTION_LOGIN"
-      ]
-    },
-    {
-      "id": "momovn-prod.BITEAM_EXP.CONVERTED_USER_RETENTION",
-      "text": "momovn-prod.BITEAM_EXP.CONVERTED_USER_RETENTION"
-    },
-    {
-      "id": "project-5400504384186300846.BITEAM_EXP.CONVERTED_USER_RETENTION",
-      "text": "project-5400504384186300846.BITEAM_EXP.CONVERTED_USER_RETENTION",
-      "next": [
-        "momovn-prod.BITEAM_EXP.CONVERTED_USER_RETENTION"
-      ]
-    },
-    {
-      "id": "momovn-prod.BITEAM_EXP.CONVERTED_USER",
-      "text": "momovn-prod.BITEAM_EXP.CONVERTED_USER"
-    },
-    {
-      "id": "project-5400504384186300846.BITEAM_EXP.CONVERTED_USER",
-      "text": "project-5400504384186300846.BITEAM_EXP.CONVERTED_USER",
-      "next": [
-        "project-5400504384186300846.BITEAM_EXP.CONVERTED_USER_RETENTION",
-        "momovn-prod.BITEAM_EXP.CONVERTED_USER"
-      ]
-    },
-    {
-      "id": "momovn-prod.BITEAM_EXP.USER_INFO_PROMOTION_CLAIMCODE",
-      "text": "momovn-prod.BITEAM_EXP.USER_INFO_PROMOTION_CLAIMCODE"
-    },
-    {
-      "id": "project-5400504384186300846.BITEAM_EXP.USER_INFO_PROMOTION_CLAIMCODE",
-      "text": "project-5400504384186300846.BITEAM_EXP.USER_INFO_PROMOTION_CLAIMCODE",
-      "next": [
-        "momovn-prod.BITEAM_EXP.USER_INFO_PROMOTION_CLAIMCODE"
-      ]
-    },
-    {
-      "id": "momovn-prod.DWH_STAGING.PROMOTION_RESULT",
-      "text": "momovn-prod.DWH_STAGING.PROMOTION_RESULT"
-    },
-    {
-      "id": "project-5400504384186300846.DWH_STAGING.PROMOTION_RESULT",
-      "text": "project-5400504384186300846.DWH_STAGING.PROMOTION_RESULT",
-      "next": [
-        "momovn-prod.DWH_STAGING.PROMOTION_RESULT"
-      ]
-    },
-    {
-      "id": "momovn-prod.BITEAM_EXP.USER_INFO",
-      "text": "momovn-prod.BITEAM_EXP.USER_INFO"
-    },
-    {
-      "id": "project-5400504384186300846.BITEAM_EXP.USER_INFO",
-      "text": "project-5400504384186300846.BITEAM_EXP.USER_INFO",
-      "next": [
-        "project-5400504384186300846.BITEAM_EXP.USER_INFO_PROMOTION_CLAIMCODE",
-        "project-5400504384186300846.DWH_STAGING.PROMOTION_RESULT",
-        "momovn-prod.BITEAM_EXP.USER_INFO"
-      ]
-    },
-    {
-      "id": "momovn-prod.BITEAM_EXP.ACCUMULATED_USER_TRANS",
-      "text": "momovn-prod.BITEAM_EXP.ACCUMULATED_USER_TRANS"
-    },
-    {
-      "id": "project-5400504384186300846.BITEAM_EXP.ACCUMULATED_USER_TRANS",
-      "text": "project-5400504384186300846.BITEAM_EXP.ACCUMULATED_USER_TRANS",
-      "next": [
-        "project-5400504384186300846.BITEAM_EXP.CONVERTED_USER",
-        "project-5400504384186300846.BITEAM_EXP.USER_INFO",
-        "project-5400504384186300846.DWH_STAGING.PROMOTION_RESULT",
-        "momovn-prod.BITEAM_EXP.ACCUMULATED_USER_TRANS"
-      ]
-    },
-    {
-      "id": "project-5400504384186300846.BITEAM_EXP.CORE_TRANS",
-      "text": "project-5400504384186300846.BITEAM_EXP.CORE_TRANS",
-      "next": [
-        "project-5400504384186300846.BITEAM_EXP.TRANS_FEE_BONUS",
-        "project-5400504384186300846.BITEAM_EXP.MAP_SERVICE",
-        "project-5400504384186300846.BITEAM_EXP.USER_RETENTION_LOGIN",
-        "project-5400504384186300846.BITEAM_EXP.ACCUMULATED_USER_TRANS",
-        "project-5400504384186300846.BITEAM_EXP.TRANS_VH"
       ]
     }
   ],
   "taskDeps": [
     {
       "id": "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.USER_RETENTION_TRANS_shard",
-      "text": "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.USER_RETENTION_TRANS_shard"
+      "text": "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.USER_RETENTION_TRANS_shard",
+      "editable": "true"
     },
     {
       "id": "etl_6hour.update_user_retention_trans_final_biteam",
       "text": "etl_6hour.update_user_retention_trans_final_biteam",
       "next": [
         "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.USER_RETENTION_TRANS_shard"
-      ]
+      ],
+      "editable": "true"
     },
     {
       "id": "etl_6hour.update_user_retention_trans_agent_biteam",
       "text": "etl_6hour.update_user_retention_trans_agent_biteam",
       "next": [
         "etl_6hour.update_user_retention_trans_final_biteam"
-      ]
+      ],
+      "editable": "true"
     },
     {
       "id": "etl_6hour.user_retention_trans_biteam",
       "text": "etl_6hour.user_retention_trans_biteam",
       "next": [
         "etl_6hour.update_user_retention_trans_agent_biteam"
-      ]
+      ],
+      "editable": "true"
     },
     {
       "id": "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.DAILY_ACTIVEUSER_TRANS_shard",
@@ -1068,213 +189,9 @@
       "next": [
         "etl_6hour.user_retention_trans_biteam",
         "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.DAILY_ACTIVEUSER_TRANS_shard"
-      ]
-    },
-    {
-      "id": "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.DAILY_TRANSACTION_shard",
-      "text": "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.DAILY_TRANSACTION_shard"
-    },
-    {
-      "id": "etl_6hour.daily_transaction_biteam",
-      "text": "etl_6hour.daily_transaction_biteam",
-      "next": [
-        "etl_6hour.daily_activeuser_trans_biteam",
-        "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.DAILY_TRANSACTION_shard"
-      ]
-    },
-    {
-      "id": "mask_BITEAM_EXP_6h_shard_daily.mask_BITEAM_EXP.TRANS_VH_shard",
-      "text": "mask_BITEAM_EXP_6h_shard_daily.mask_BITEAM_EXP.TRANS_VH_shard"
-    },
-    {
-      "id": "etl_6hour.trans_vh_biteam_job",
-      "text": "etl_6hour.trans_vh_biteam_job",
-      "next": [
-        "mask_BITEAM_EXP_6h_shard_daily.mask_BITEAM_EXP.TRANS_VH_shard"
-      ]
-    },
-    {
-      "id": "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.PAID_USER_TRANS_shard",
-      "text": "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.PAID_USER_TRANS_shard"
-    },
-    {
-      "id": "etl_6hour.paid_user_trans",
-      "text": "etl_6hour.paid_user_trans",
-      "next": [
-        "etl_6hour.daily_transaction_biteam",
-        "etl_6hour.trans_vh_biteam_job",
-        "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.PAID_USER_TRANS_shard"
-      ]
-    },
-    {
-      "id": "etl_6hour.merge_all_core_trans_grouped_by_hour",
-      "text": "etl_6hour.merge_all_core_trans_grouped_by_hour"
-    },
-    {
-      "id": "etl_6hour.merge_all_core_trans_without_dgd",
-      "text": "etl_6hour.merge_all_core_trans_without_dgd",
-      "next": [
-        "etl_6hour.merge_all_core_trans_grouped_by_hour"
-      ]
-    },
-    {
-      "id": "etl_6hour.merge_core_trans",
-      "text": "etl_6hour.merge_core_trans"
-    },
-    {
-      "id": "mask_BITEAM_EXP_30m_shard_monthly.mask_BITEAM_EXP.MONTHLY_ACTIVEUSER_TRANS_shard",
-      "text": "mask_BITEAM_EXP_30m_shard_monthly.mask_BITEAM_EXP.MONTHLY_ACTIVEUSER_TRANS_shard"
-    },
-    {
-      "id": "etl_6hour.monthly_activeuser_trans_biteam",
-      "text": "etl_6hour.monthly_activeuser_trans_biteam",
-      "next": [
-        "mask_BITEAM_EXP_30m_shard_monthly.mask_BITEAM_EXP.MONTHLY_ACTIVEUSER_TRANS_shard"
-      ]
-    },
-    {
-      "id": "etl_6hour.user_trans_with_bank_account",
-      "text": "etl_6hour.user_trans_with_bank_account"
-    },
-    {
-      "id": "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.CORE_TRANS_shard",
-      "text": "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.CORE_TRANS_shard"
-    },
-    {
-      "id": "etl_6hour.merge_fee_job_biteam",
-      "text": "etl_6hour.merge_fee_job_biteam",
-      "next": [
-        "etl_6hour.paid_user_trans",
-        "etl_6hour.merge_all_core_trans_without_dgd",
-        "etl_6hour.merge_core_trans",
-        "etl_6hour.monthly_activeuser_trans_biteam",
-        "etl_6hour.user_trans_with_bank_account",
-        "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.CORE_TRANS_shard"
-      ]
-    },
-    {
-      "id": "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.TRANS_FEE_BONUS_shard",
-      "text": "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.TRANS_FEE_BONUS_shard"
-    },
-    {
-      "id": "etl_6hour.trans_fee_bonus_biteam",
-      "text": "etl_6hour.trans_fee_bonus_biteam",
-      "next": [
-        "etl_6hour.merge_fee_job_biteam",
-        "mask_BITEAM_EXP_30m_shard_daily.mask_BITEAM_EXP.TRANS_FEE_BONUS_shard"
-      ]
-    },
-    {
-      "id": "mask_BITEAM_EXP_6h_full_snapshot.mask_BITEAM_EXP.MAP_SERVICE_full",
-      "text": "mask_BITEAM_EXP_6h_full_snapshot.mask_BITEAM_EXP.MAP_SERVICE_full"
-    },
-    {
-      "id": "etl_6hour.map_service_biteam",
-      "text": "etl_6hour.map_service_biteam",
-      "next": [
-        "mask_BITEAM_EXP_6h_full_snapshot.mask_BITEAM_EXP.MAP_SERVICE_full"
-      ]
-    },
-    {
-      "id": "mask_BITEAM_EXP_6h_shard_daily.mask_BITEAM_EXP.USER_RETENTION_LOGIN_shard",
-      "text": "mask_BITEAM_EXP_6h_shard_daily.mask_BITEAM_EXP.USER_RETENTION_LOGIN_shard"
-    },
-    {
-      "id": "etl_6hour.update_user_retention_login_biteam",
-      "text": "etl_6hour.update_user_retention_login_biteam",
-      "next": [
-        "mask_BITEAM_EXP_6h_shard_daily.mask_BITEAM_EXP.USER_RETENTION_LOGIN_shard"
-      ]
-    },
-    {
-      "id": "etl_6hour.user_retention_login_biteam",
-      "text": "etl_6hour.user_retention_login_biteam",
-      "next": [
-        "etl_6hour.update_user_retention_login_biteam"
-      ]
-    },
-    {
-      "id": "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.CONVERTED_USER_RETENTION_shard",
-      "text": "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.CONVERTED_USER_RETENTION_shard"
-    },
-    {
-      "id": "etl_6hour.converted_user_retention_biteam",
-      "text": "etl_6hour.converted_user_retention_biteam",
-      "next": [
-        "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.CONVERTED_USER_RETENTION_shard"
-      ]
-    },
-    {
-      "id": "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.CONVERTED_USER_shard",
-      "text": "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.CONVERTED_USER_shard"
-    },
-    {
-      "id": "etl_6hour.converted_user_biteam",
-      "text": "etl_6hour.converted_user_biteam",
-      "next": [
-        "etl_6hour.converted_user_retention_biteam",
-        "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.CONVERTED_USER_shard"
-      ]
-    },
-    {
-      "id": "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.USER_INFO_PROMOTION_CLAIMCODE_shard",
-      "text": "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.USER_INFO_PROMOTION_CLAIMCODE_shard"
-    },
-    {
-      "id": "etl_6hour.user_info_promotion_claimcode_biteam_job",
-      "text": "etl_6hour.user_info_promotion_claimcode_biteam_job",
-      "next": [
-        "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.USER_INFO_PROMOTION_CLAIMCODE_shard"
-      ]
-    },
-    {
-      "id": "mask_DWH_STAGING_6h_shard_snapshot.mask_DWH_STAGING.PROMOTION_RESULT_shard",
-      "text": "mask_DWH_STAGING_6h_shard_snapshot.mask_DWH_STAGING.PROMOTION_RESULT_shard"
-    },
-    {
-      "id": "etl_6hour.promotion_result_biteam_job",
-      "text": "etl_6hour.promotion_result_biteam_job",
-      "next": [
-        "mask_DWH_STAGING_6h_shard_snapshot.mask_DWH_STAGING.PROMOTION_RESULT_shard"
-      ]
-    },
-    {
-      "id": "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.USER_INFO_shard",
-      "text": "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.USER_INFO_shard"
-    },
-    {
-      "id": "etl_6hour.user_info_biteam",
-      "text": "etl_6hour.user_info_biteam",
-      "next": [
-        "etl_6hour.user_info_promotion_claimcode_biteam_job",
-        "etl_6hour.promotion_result_biteam_job",
-        "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.USER_INFO_shard"
-      ]
-    },
-    {
-      "id": "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.ACCUMULATED_USER_TRANS_shard",
-      "text": "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.ACCUMULATED_USER_TRANS_shard"
-    },
-    {
-      "id": "etl_6hour.accumulated_user_trans_cost_opt",
-      "text": "etl_6hour.accumulated_user_trans_cost_opt",
-      "next": [
-        "etl_6hour.converted_user_biteam",
-        "etl_6hour.user_info_biteam",
-        "etl_6hour.promotion_result_biteam_job",
-        "mask_BITEAM_EXP_30m_shard_snapshot.mask_BITEAM_EXP.ACCUMULATED_USER_TRANS_shard"
-      ]
-    },
-    {
-      "id": "etl_6hour.core_trans",
-      "text": "etl_6hour.core_trans",
-      "next": [
-        "etl_6hour.trans_fee_bonus_biteam",
-        "etl_6hour.map_service_biteam",
-        "etl_6hour.user_retention_login_biteam",
-        "etl_6hour.accumulated_user_trans_cost_opt",
-        "etl_6hour.trans_vh_biteam_job"
-      ]
+      ],
+      "editable": "true"
     }
   ]
 }
+
