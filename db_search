@@ -1,30 +1,17 @@
-[ {
-  "linked_resource" : "//bigquery.googleapis.com/projects/project-5400504384186300846/datasets/BITEAM_EXP/tables/ALL_CORE_TRANS_WITH_BANK_ACCOUNT",
-  "linked_name" : "project-5400504384186300846.BITEAM_EXP.ALL_CORE_TRANS_WITH_BANK_ACCOUNT",
-  "linked_type" : "bigquery"
-}, {
-  "linked_resource" : "//bigquery.googleapis.com/projects/project-5400504384186300846/datasets/REPORT/tables/DAILY_PAID_USER_TRANS",
-  "linked_name" : "project-5400504384186300846.REPORT.DAILY_PAID_USER_TRANS",
-  "linked_type" : "bigquery"
-}, {
-  "linked_resource" : "//bigquery.googleapis.com/projects/project-5400504384186300846/datasets/REPORT/tables/MONTHLY_REPORT_L4_TRANS",
-  "linked_name" : "project-5400504384186300846.REPORT.MONTHLY_REPORT_L4_TRANS",
-  "linked_type" : "bigquery"
-}, {
-  "linked_resource" : "//bigquery.googleapis.com/projects/momovn-prod/datasets/KSNB/tables/NO_VOUCHER_TRANS",
-  "linked_name" : "momovn-prod.KSNB.NO_VOUCHER_TRANS",
-  "linked_type" : "bigquery"
-}, {
-  "linked_resource" : "//bigquery.googleapis.com/projects/project-5400504384186300846/datasets/BITEAM_EXP/tables/ALL_CORE_TRANS",
-  "linked_name" : "project-5400504384186300846.BITEAM_EXP.ALL_CORE_TRANS",
-  "linked_type" : "bigquery"
-}, {
-  "linked_resource" : "//bigquery.googleapis.com/projects/project-5400504384186300846/datasets/BITEAM_EXP/tables/MS_ALL_TRANS_PAID",
-  "linked_name" : "project-5400504384186300846.BITEAM_EXP.MS_ALL_TRANS_PAID",
-  "linked_type" : "bigquery"
-}, {
-  "linked_resource" : "//datacatalog.googleapis.com/projects/project-5400504384186300846/locations/US/entryGroups/@bigquery/entries/cHJvamVjdHMvcHJvamVjdC01NDAwNTA0Mzg0MTg2MzAwODQ2L2RhdGFzZXRzL0JJVEVBTV9FWFAvdGFibGVzL0NPUkVfVFJBTlNfQEJpZ1F1ZXJ5RGF0ZVNoYXJkZWRUYWJsZQ",
-  "linked_name" : "",
-  "linked_type" : "datacatalog"
-}
+[
+  {
+    "metricId": "row_count_table",
+    "query": "select count(1) from table",
+    "stakeholders": [
+      "duc@mservice",
+      "hung@mservice"
+    ]
+  },
+  {
+    "metricId": "a30",
+    "query": "select count(1) from a30",
+    "stakeholders": [
+      "hai@mservice"
+    ]
+  }
 ]
